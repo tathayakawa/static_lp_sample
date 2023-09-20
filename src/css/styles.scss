@@ -1,0 +1,33 @@
+$breakpoint : 768px;
+
+@mixin mq($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+:root {
+  --primary-color: #0cbf97;
+  --background-color: #f1f1f1;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+#header {
+  background-color: var(--primary-color);
+  height: 60px;
+
+  @include mq($breakpoint) {
+    height: 40px;
+  }
+}
+
+.img-fluid-md {
+  width: fit-content;
+
+  @include mq($breakpoint) {
+    width: 100%;
+  }
+}
