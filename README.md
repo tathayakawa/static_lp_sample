@@ -1,0 +1,7 @@
+# README
+
+## setup
+
+```
+npm install
+```
